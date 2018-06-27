@@ -7,18 +7,18 @@
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
+<link href="css/css_checkbox.css" rel="stylesheet" id="bootstrap-css">
 	<style>
 		html,
  body {
     height: 100%;
-	  background-color: #171717
+	 background-color: #171717
   }  
 	#radioBtn .notActive{
     color: #3276b1;
     background-color: #ffFFFf;
 }
-			.tabla {
+		.tabla {
  width:300px;
     height:300px;
     background-color: #373737;
@@ -55,58 +55,31 @@ td:first-child, th:first-child {
 	</head>
 
 <body>
-	
-<?php
-	 
-	$secc = $_REQUEST['secc'];
-	
-	?>
-	
-	
 <div class="container" align="center">
 <div class="row">
 <div class="col-lg-1 col-centered" > 
 	
 	
+	<form action="login_pro.php" method="post">
 	
-<div align="center">
-	<form action="pre.php" method="post">
-	<input type="hidden" value="<?php echo $_REQUEST['secci'] ;?>" name="secci">
-<table width="100%" border="0" align="center" class="tabla" cellspacing="0" cellpadding="0">
-	 <tr align="center">
-      <td style="font-size: 32px ; color: white">Selecciona la casilla<br>
-		 <select style="width: 80%" >
-		<?php include('opciones.php') ; ?>
-	  
-	</select>
-		 </td>
-      </tr>
-	 <tr align="center">
-		 <td style="font-size: 32px ; "><div style="color: white">Pin</div>
-<input type="number" name="pin" style="height:40px;font-size:14pt;width: 80%" onfocus="if(this.value == '9999') { this.value = ''; }" value="9999"></td>
+	<div align="center">
+	
+	<table width="100%" border="0" align="center" class="tabla" cellspacing="0" cellpadding="0">
+      <tr align="center">
+      <td style="font-size: 32px ; color: white">Region<br></td>
       </tr>
     <tr align="center">
-      <td style="font-size: 32px ; color: white"><br>       
-		<?php if (isset($verifica) == 1)
-{
-echo ('		  <input type="submit" value="Continuar" class="btn btn-primary btn-sm notActive" style="font-size: 32px">');
-}
-		  else
-		{
-echo ('		  Region no encontrada <br>
-<a href="login.php" class="btn btn-primary btn-sm notActive" style="font-size: 32px ; background-color: red; " > Regresar </a>');
-}	?>  
-		
-		</td>
+      <td><br>
+<input name="secci" type="number" style="height:40px;font-size:14pt;width: 80%" ></td>
       </tr>
-		</table>
-	
-	
-	
-		<br>
+    <tr align="center">
+      <td><br>        <input type="submit" value="Continuar" class="btn btn-primary btn-sm notActive" style="font-size: 32px"></td>
+      </tr>
+</table>
 
+	
+	</div>
 	</form>
-</div>	
 	
 	
 	
@@ -114,6 +87,8 @@ echo ('		  Region no encontrada <br>
 	
 	
 	
-	
+	</div></div></div>
+
+
 </body>
 </html>

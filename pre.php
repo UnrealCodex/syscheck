@@ -24,20 +24,60 @@
 	</head>
 
 <body>
-	
-<?php
-	 
-	$secc = $_REQUEST['secc'];
-	
-	?>
-	
-	
-<div class="container" align="center">
+	<?php 
+	$secci = $_REQUEST['secci'] ;
+	date_default_timezone_set("America/Mexico_City");
+	$hoy = date("g:i a"); 
+	//echo $hoy;
+	 ?>
+	<div class="container" align="center">
 <div class="row">
 <div class="col-lg-1 col-centered" > 
+<?php
+	 
+			
+require_once  'conexion.php'; //conexion a la BD
+$query2       = sprintf("SELECT * FROM casillas WHERE secci = '$secci'  ");
+$result2      = @mysqli_query($link,$query2);
+//$rowAccount2  = @mysqli_fetch_array($result2);
+
+
+while($rowAccount2  = @mysqli_fetch_array($result2))
+{
+	echo ('
+
 	
 	
 	
-	
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+		<td><strong>Seccion:</strong>').$rowAccount2['secci'].('<br>
+		<strong>Casilla:</strong>').utf8_encode($rowAccount2['tip_cas']).('<br>
+		<strong>Direccion:<br></strong>').utf8_encode($rowAccount2['dom']).('<br>
+		<strong>Ubicacion:<br></strong>').utf8_encode($rowAccount2['ubi']).('<br>
+		</td>
+    </tr>
+    <tr>
+      <td><strong>Apertura:</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Cierre:</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Gente de estructura Registrada</strong><br>
+	  <strong>Hora:</strong><input type="text" value="').$hoy.('" disabled name="reg" max="10"> <strong># Personas</strong> <input type="text" value="" disabled name="reg"></td>
+    </tr>
+    <tr>
+      <td><strong>Resultado Final Alcalde:</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Resultado Final Diputado:</strong></td>
+    </tr>
+  </tbody>
+</table>') ;
+
+}
+	?>
 </body>
 </html>
