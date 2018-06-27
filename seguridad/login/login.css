@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+img.bg {
+			/* Set rules to fill background */
+			min-height: 100%;
+			min-width: 1024px;
+			
+			/* Set up proportionate scaling */
+			width: 100%;
+			height: auto;
+			
+			/* Set up positioning */
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		
+		@media screen and (max-width: 1024px){
+img.bg {
+				left: 50%;
+				margin-left: -512px; }
+		}
+#page-wrap {
+	position: relative;
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin: 50px auto;
+	padding: 20px;
+		/*background: white; -moz-box-shadow: 0 0 20px black;
+		-webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;*/
+		 }
+	
+	#page-header {
+	/*background-color:#ececec;*/
+	float:left;
+	width: 1152px;
+	
+	}	 
+#page-wrapMain {
+	/*background-color:#ececec;*/
+	position: relative;
+	display: block;
+	width: 1152px;
+	height: 864px;
+	margin: 20px auto;
+	/*padding: 20px;
+		/*background: white; -moz-box-shadow: 0 0 20px black;
+		-webk	 
+		 
+		 */
+	}
+	
+	
+
+p { 
+font: 15px/2 Georgia, Serif; margin: 0 0 30px 0; text-indent: 40px; 
+}
+
+submit {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+.block { width: 200px; overflow: hidden; }
+.block .top { /* style stuff */ }
+.block .bottom { float: left; width: 50%; }
+
+
+
+
+#first {
+    width: 1152px;
+    float:left; /* add this */
+    
+}
+#second {
+	width: 1152px;
+	height:850px;
+    /*background-color:#ececec;*/
+    /*overflow: hidden; /* if you don't want #second to wrap below #first */
+}

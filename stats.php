@@ -26,10 +26,9 @@
 <body>
 
 			<div align="left" >
-			<label>1. Hora de apertura:</label>	<br>
-			<input name="p1" type="text" required="required" style="height:40px;font-size:14pt;width: 100%" value="">
-			</div>
-			<br><br>	
+			<label>1. Hora de Apertura:</label>	<br>
+			
+				
 	
 <select name="selHour">
             <option selected="selected" value="">Select Hour</option>
@@ -115,7 +114,8 @@
             <option value="PM">PM</option>
         </select>	
 	
-	
+	</div>
+			<br><br>
 	dd
 	A que horas cerro
 	<br>
