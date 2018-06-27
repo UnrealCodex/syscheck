@@ -7,6 +7,9 @@
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<style>
 		html,
@@ -24,6 +27,12 @@
 	</head>
 
 <body>
+	<div class="container">
+  
+ 
+</div>
+
+
 	<?php 
 	$secci = $_REQUEST['secci'] ;
 	date_default_timezone_set("America/Mexico_City");
@@ -33,6 +42,7 @@
 	<div class="container" align="center">
 <div class="row">
 <div class="col-lg-1 col-centered" > 
+	<div style="font-size: 22px ;">
 <?php
 	 
 			
@@ -46,38 +56,74 @@ while($rowAccount2  = @mysqli_fetch_array($result2))
 {
 	echo ('
 
+	<br>
+<br>
+
 	
 	
-	
-<table width="100%" border="0">
+<table width="100%" border="1" align="center">
   <tbody>
-    <tr>
-		<td><strong>Seccion:</strong>').$rowAccount2['secci'].('<br>
-		<strong>Casilla:</strong>').utf8_encode($rowAccount2['tip_cas']).('<br>
-		<strong>Direccion:<br></strong>').utf8_encode($rowAccount2['dom']).('<br>
-		<strong>Ubicacion:<br></strong>').utf8_encode($rowAccount2['ubi']).('<br>
+    <tr align="left">
+		<td width="50%" align="right"><strong>Seccion :</strong>
 		</td>
+		<td width="50%"> ').$rowAccount2['secci'].('</td>
     </tr>
     <tr>
-      <td><strong>Apertura:</strong></td>
+      <td align="right"><strong>Casilla :</strong></td>
+      <td> ').utf8_encode($rowAccount2['tip_cas']).('</td>
     </tr>
     <tr>
-      <td><strong>Cierre:</strong></td>
+      <td align="right"><strong>Direccion :</strong></td>
+      <td><a href="#" data-toggle="popover"  data-content="').utf8_encode($rowAccount2['dom']).('"> Ver</a></td>
     </tr>
     <tr>
-      <td><strong>Gente de estructura Registrada</strong><br>
-	  <strong>Hora:</strong><input type="text" value="').$hoy.('" disabled name="reg" max="10"> <strong># Personas</strong> <input type="text" value="" disabled name="reg"></td>
+      <td align="right"><strong>Ubicacion :</strong></td>
+      <td><a href="#" data-toggle="popover"  data-content="').utf8_encode($rowAccount2['ubi']).('"> Ver</a></td>
     </tr>
     <tr>
-      <td><strong>Resultado Final Alcalde:</strong></td>
+      <td align="right"><strong>Apertura :</strong>
+</td>
+      <td> ').$rowAccount2['abre'].('<a href="timeA.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
-      <td><strong>Resultado Final Diputado:</strong></td>
+      <td align="right"><strong>Cierre :</strong>
+</td>
+      <td> ').$rowAccount2['cierra'].('<a href="timeC.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><strong>Gente de estructura Registrada</strong>
+        
+        
+</td>
+    </tr>
+    <tr>
+      <td align="right"> <strong>Hora :</strong></td>
+      <td> ').$rowAccount2['h_gente'].('</td>
+    </tr>
+    <tr>
+      <td align="right"><strong>No. Personas :</strong> </td>
+      <td> ').$rowAccount2['gente'].('</td>
+    </tr>
+    <tr>
+      <td align="right"><strong>R. Alcalde :</strong></td>
+      <td> ').$rowAccount2['fin_alc'].('</td>
+    </tr>
+    <tr>
+      <td align="right"><strong>R. Diputado :</strong></td>
+      <td> ').$rowAccount2['fin_dip'].('</td>
     </tr>
   </tbody>
-</table>') ;
+</table>
+
+') ;
 
 }
 	?>
+		</div>
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
 </body>
 </html>

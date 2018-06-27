@@ -58,7 +58,7 @@ td:first-child, th:first-child {
 	
 <?php
 	 
-	$secc = $_REQUEST['secc'];
+	$secci = $_REQUEST['secci'];
 	
 	?>
 	
@@ -74,7 +74,7 @@ td:first-child, th:first-child {
 	<input type="hidden" value="<?php echo $_REQUEST['secci'] ;?>" name="secci">
 <table width="100%" border="0" align="center" class="tabla" cellspacing="0" cellpadding="0">
 	 <tr align="center">
-      <td style="font-size: 32px ; color: white">Selecciona la casilla<br>
+      <td style="font-size: 28px ;" ><div style="color: white">Selecciona la casilla</div><br>
 		 <select style="width: 80%" >
 		<?php include('opciones.php') ; ?>
 	  
@@ -83,7 +83,7 @@ td:first-child, th:first-child {
       </tr>
 	 <tr align="center">
 		 <td style="font-size: 32px ; "><div style="color: white">Pin</div>
-<input type="number" name="pin" style="height:40px;font-size:14pt;width: 80%" onfocus="if(this.value == '9999') { this.value = ''; }" value="9999"></td>
+<input type="number" name="pin" style="height:40px;font-size:14pt;width: 80%"  value=""></td>
       </tr>
     <tr align="center">
       <td style="font-size: 32px ; color: white"><br>       
