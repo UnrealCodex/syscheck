@@ -29,19 +29,19 @@
 <body>
 	<div class="container">
 
-</div>
-
-
 <div class="container" align="center">
 <div class="row">
-<div class="col-lg-1 col-centered" > 
+<div class="col-lg-1 col-centered" style="font-size: 32px" > 
 	<form action="timeC_pro.php" method="post">
-	
-	<input type="hidden" value="<?php echo $_REQUEST['secci'];?>" name="secci">
-	<input type="hidden" value="<?php echo $_REQUEST['fol_int'];?>" name="fol_int">
-	<label>1. Hora de Apertura:</label>	<br>
-<select name="selHour">
-            <option selected="selected" value="">Seleccionar Hora</option>
+	<br>
+		<div align="center">Hora de Apertura de casillas</div><br>
+
+    <table width="100%" border="1">
+      <tbody>
+        <tr>
+          <td width="50%" align="right">Hora </td>
+          <td width="50%"><select name="selHour">
+            <option selected="selected" value="">Hora</option>
             <option value="00">00</option>
             <option value="01">01</option>
             <option value="02">02</option>
@@ -55,8 +55,11 @@
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
-        </select>
-<select name="selMin">
+          </select></td>
+        </tr>
+        <tr>
+          <td align="right">Minutos:</td>
+          <td><select name="selMin">
             <option selected="selected" value="">Minutos</option>
             <option value="00">00</option>
             <option value="01">01</option>
@@ -118,13 +121,26 @@
             <option value="57">57</option>
             <option value="58">58</option>
             <option value="59">59</option>
-        </select>
-<select name="AMPM">
+          </select></td>
+        </tr>
+        <tr>
+          <td align="right">Horario:</td>
+          <td><select name="AMPM">
             <option value="AM">AM</option>
             <option value="PM">PM</option>
-        </select>	
-</div>
-	<input type="submit" value="Guardar">
-	</form>
+          </select></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><br>            <input type="submit" value="Guardar" class="btn btn-primary btn-sm notActive" style="font-size: 32px">
+          <br></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+
+	<input type="hidden" value="<?php echo $_REQUEST['secci'];?>" name="secci">
+	<input type="hidden" value="<?php echo $_REQUEST['fol_int'];?>" name="fol_int">
+	
+	</form></div>
 </body>
 </html>

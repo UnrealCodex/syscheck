@@ -29,7 +29,8 @@ html, body
 <div class="col-lg-1 col-centered" > 
 <?php
 require_once  'conexion.php';
-	$abre = $_POST['selHour'].":".$_POST['selMin'].$_POST['AMPM'];
+	$fin_alc = $_POST['fin_alc'];
+	
 	$fol_int = $_POST['fol_int'];
  $secci = $_POST['secci'];
 
@@ -37,7 +38,7 @@ require_once  'conexion.php';
 		mysqli_query($link ,"UPDATE `casillas` SET 
 
 
-abre='$abre'
+fin_alc='$fin_alc'
 
 WHERE `casillas`.`fol_int`='$fol_int'");	
 	

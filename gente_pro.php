@@ -29,7 +29,10 @@ html, body
 <div class="col-lg-1 col-centered" > 
 <?php
 require_once  'conexion.php';
-	$abre = $_POST['selHour'].":".$_POST['selMin'].$_POST['AMPM'];
+	$gente = $_POST['gente'];
+	$old_gente = $_POST['old_gente'];
+	$suma_gente = $gente + $old_gente;
+	$h_gente = $_POST['h_gente'];
 	$fol_int = $_POST['fol_int'];
  $secci = $_POST['secci'];
 
@@ -37,7 +40,8 @@ require_once  'conexion.php';
 		mysqli_query($link ,"UPDATE `casillas` SET 
 
 
-abre='$abre'
+gente='$suma_gente',
+h_gente='$h_gente'
 
 WHERE `casillas`.`fol_int`='$fol_int'");	
 	

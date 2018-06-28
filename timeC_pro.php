@@ -47,7 +47,9 @@ WHERE `casillas`.`fol_int`='$fol_int'");
 
 mysqli_close($link);
 
-echo ('<a href="pre.php?fol_int=').$fol_int.('&secci=').$secci.('" class="btn btn-primary btn-sm notActive" style="font-size: 28px ; background-color: green; " > Continuar </a>')
+echo ('<br>
+<br>
+<a href="pre.php?fol_int=').$fol_int.('&secci=').$secci.('" class="btn btn-primary btn-sm notActive" style="font-size: 28px ; background-color: green; " > Continuar </a>')
 
 ?>
 	</body>

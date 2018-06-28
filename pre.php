@@ -61,7 +61,7 @@ while($rowAccount2  = @mysqli_fetch_array($result2))
 
 	
 	
-<table width="100%" border="1" align="center">
+	<table width="100%" border="1" align="center">
   <tbody>
     <tr align="left">
 		<td width="50%" align="right"><strong>Seccion :</strong>
@@ -102,15 +102,15 @@ while($rowAccount2  = @mysqli_fetch_array($result2))
     </tr>
     <tr>
       <td align="right"><strong>No. Personas :</strong> </td>
-      <td> ').$rowAccount2['gente'].('</td>
+      <td> ').$rowAccount2['gente'].('<a href="gente.php?fol_int=').$rowAccount2['fol_int'].('&gente=').$rowAccount2['gente'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td align="right"><strong>R. Alcalde :</strong></td>
-      <td> ').$rowAccount2['fin_alc'].('</td>
+      <td> ').$rowAccount2['fin_alc'].('<a href="alcalde.php?fol_int=').$rowAccount2['fol_int'].('&fin_alc=').$rowAccount2['fin_alc'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td align="right"><strong>R. Diputado :</strong></td>
-      <td> ').$rowAccount2['fin_dip'].('</td>
+      <td> ').$rowAccount2['fin_dip'].('<a href="diputado.php?fol_int=').$rowAccount2['fol_int'].('&fin_dip=').$rowAccount2['fin_dip'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
   </tbody>
 </table>
