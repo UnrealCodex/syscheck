@@ -5,7 +5,7 @@
 //
 	
 	
-$query3       = sprintf("SELECT * FROM casillas WHERE secci = '$rowAccount2[secci]'  ");
+$query3       = sprintf("SELECT * FROM casillas WHERE secci = '$rowAccount2[secci]' GROUP BY secci  ");
 $result3      = @mysqli_query($link,$query3);
 //$rowAccount2  = @mysqli_fetch_array($result2);
 

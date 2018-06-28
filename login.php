@@ -12,7 +12,7 @@
 		html,
  body {
     height: 100%;
-	 background-color: #171717
+	 background-color: #fff
   }  
 	#radioBtn .notActive{
     color: #3276b1;
