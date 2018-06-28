@@ -35,6 +35,7 @@
 
 	<?php 
 	$secci = $_REQUEST['secci'] ;
+	$pass = $_REQUEST['pass'] ;
 	date_default_timezone_set("America/Mexico_City");
 	$hoy = date("g:i a"); 
 	//echo $hoy;
@@ -47,7 +48,7 @@
 	 
 			
 require_once  'conexion.php'; //conexion a la BD
-$query2       = sprintf("SELECT * FROM casillas WHERE secci = '$secci'  ");
+$query2       = sprintf("SELECT * FROM casillas WHERE secci = '$secci' AND pass =  '$pass' ");
 $result2      = @mysqli_query($link,$query2);
 //$rowAccount2  = @mysqli_fetch_array($result2);
 
@@ -119,6 +120,13 @@ while($rowAccount2  = @mysqli_fetch_array($result2))
 
 }
 	?>
+	<br>
+<br>
+	
+		
+<a href="index.php" class="btn btn-primary btn-sm notActive" style="font-size: 28px ; background-color: red; " > Salir </a>		
+		
+		
 		</div>
 	<script>
 $(document).ready(function(){

@@ -83,7 +83,7 @@ td:first-child, th:first-child {
       </tr>
 	 <tr align="center">
 		 <td style="font-size: 32px ; "><div style="color: white">Pin</div>
-<input type="number" name="pin" style="height:40px;font-size:14pt;width: 80%"  value=""></td>
+<input type="number" name="pass" style="height:40px;font-size:14pt;width: 80%"  value=""></td>
       </tr>
     <tr align="center">
       <td style="font-size: 32px ; color: white"><br>       

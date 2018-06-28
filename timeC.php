@@ -41,8 +41,7 @@
         <tr>
           <td width="50%" align="right">Hora </td>
           <td width="50%"><select name="selHour">
-            <option selected="selected" value="">Hora</option>
-            <option value="00">00</option>
+            <option selected="selected" value="00">00</option>
             <option value="01">01</option>
             <option value="02">02</option>
             <option value="03">03</option>
@@ -60,8 +59,7 @@
         <tr>
           <td align="right">Minutos:</td>
           <td><select name="selMin">
-            <option selected="selected" value="">Minutos</option>
-            <option value="00">00</option>
+             <option selected="selected" value="00">00</option>
             <option value="01">01</option>
             <option value="02">02</option>
             <option value="03">03</option>
