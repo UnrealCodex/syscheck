@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 
 function toggleD() {
@@ -53,8 +52,6 @@ function toggleU() {
 
 
 	<?php 
-	
-	$contador = 0;
 	$secci = $_REQUEST['secci'] ;
 	$pass = $_REQUEST['pass'] ;
 	date_default_timezone_set("America/Mexico_City");
@@ -76,7 +73,6 @@ $result2      = @mysqli_query($link,$query2);
 
 while($rowAccount2  = @mysqli_fetch_array($result2))
 {
-	
 	//echo $rowAccount2['fol_int'];
 	echo ('<script>
 
@@ -120,29 +116,7 @@ function toggleB').$rowAccount2['fol_int'].('() {
     <tr>
       <td align="left"><strong>Direccion :</strong></td>
       <td align="left"><span onClick="toggleA').$rowAccount2['fol_int'].('();">Ver</span></td>
-      <td align="left">');
-	
-	if ($rowAccount2['secci'] == 844){
-		echo ('<a href="').$rowAccount2['link_map'].('" >Mapa</a>');
-	}
-	elseif ($rowAccount2['secci'] == 845)
-	{
-		echo ('<a href="').$rowAccount2['link_map'].('" >Mapa</a>');
-	}
-	elseif ($rowAccount2['secci'] == 2329)
-	{
-		echo ('<a href="').$rowAccount2['link_map'].('" >Mapa</a>');
-	}
-	else
-	{	
-		include('api_test/code_abe.php');
-	}
-	
-		
-	
-	
-	
-	echo ('</td>
+      <td align="left"><a href="').$rowAccount2['link_map'].('" target="_new" >Mapa</a></td>
     </tr>
     <tr id="A').$rowAccount2['fol_int'].('" style="display:none;">
       <td colspan="3" align="left" >').utf8_encode($rowAccount2['dom']).('</td>
@@ -196,8 +170,7 @@ function toggleB').$rowAccount2['fol_int'].('() {
   </tbody>
 </table>
 ') ;
-$contador = $contador + 1 ;
-	
+
 }
 	?>
 	<br>
@@ -208,6 +181,10 @@ $contador = $contador + 1 ;
 		
 		
 		</div>
-
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
 </body>
 </html>
