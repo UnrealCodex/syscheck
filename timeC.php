@@ -138,6 +138,7 @@
 
 	<input type="hidden" value="<?php echo $_REQUEST['secci'];?>" name="secci">
 	<input type="hidden" value="<?php echo $_REQUEST['fol_int'];?>" name="fol_int">
+		<input type="hidden" value="<?php echo $_REQUEST['pass'];?>" name="pass">
 	
 	</form></div>
 </body>

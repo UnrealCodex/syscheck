@@ -35,6 +35,7 @@ require_once  'conexion.php';
 	$h_gente = $_POST['h_gente'];
 	$fol_int = $_POST['fol_int'];
  $secci = $_POST['secci'];
+	$pass = $_POST['pass'];
 
 
 		mysqli_query($link ,"UPDATE `casillas` SET 
@@ -53,7 +54,7 @@ mysqli_close($link);
 
 echo ('<br>
 <br>
-<a href="pre.php?fol_int=').$fol_int.('&secci=').$secci.('" class="btn btn-primary btn-sm notActive" style="font-size: 28px ; background-color: green; " > Continuar </a>')
+<a href="pre.php?fol_int=').$fol_int.('&secci=').$secci.('&pass=').$pass.('" class="btn btn-primary btn-sm notActive" style="font-size: 28px ; background-color: green; " > Continuar </a>')
 
 ?>
 	</body>

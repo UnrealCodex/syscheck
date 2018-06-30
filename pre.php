@@ -159,13 +159,13 @@ function toggleB').$rowAccount2['fol_int'].('() {
       <td align="left"><strong>Apertura :</strong>
 </td>
       <td align="left"> ').$rowAccount2['abre'].('</td>
-      <td align="left"><a href="timeA.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+      <td align="left"><a href="timeA.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('&pass=').$rowAccount2['pass'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td align="left"><strong>Cierre :</strong>
 </td>
       <td align="left"> ').$rowAccount2['cierra'].('</td>
-      <td align="left"><a href="timeC.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+      <td align="left"><a href="timeC.php?fol_int=').$rowAccount2['fol_int'].('&secci=').$rowAccount2['secci'].('&pass=').$rowAccount2['pass'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td colspan="3" align="center"><strong>Gente de estructura Registrada</strong>
@@ -181,17 +181,17 @@ function toggleB').$rowAccount2['fol_int'].('() {
     <tr>
       <td align="left"><strong>No. Personas :</strong> </td>
       <td align="left"> ').$rowAccount2['gente'].('</td>
-      <td align="left"><a href="gente.php?fol_int=').$rowAccount2['fol_int'].('&gente=').$rowAccount2['gente'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+      <td align="left"><a href="gente.php?fol_int=').$rowAccount2['fol_int'].('&gente=').$rowAccount2['gente'].('&secci=').$rowAccount2['secci'].('&pass=').$rowAccount2['pass'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td align="left"><strong>R. Alcalde :</strong></td>
       <td align="left"> ').$rowAccount2['fin_alc'].('</td>
-      <td align="left"><a href="alcalde.php?fol_int=').$rowAccount2['fol_int'].('&fin_alc=').$rowAccount2['fin_alc'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+      <td align="left"><a href="alcalde.php?fol_int=').$rowAccount2['fol_int'].('&fin_alc=').$rowAccount2['fin_alc'].('&secci=').$rowAccount2['secci'].('&pass=').$rowAccount2['pass'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
     <tr>
       <td align="left"><strong>R. Diputado :</strong></td>
       <td align="left"> ').$rowAccount2['fin_dip'].('</td>
-      <td align="left"><a href="diputado.php?fol_int=').$rowAccount2['fol_int'].('&fin_dip=').$rowAccount2['fin_dip'].('&secci=').$rowAccount2['secci'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
+      <td align="left"><a href="diputado.php?fol_int=').$rowAccount2['fol_int'].('&fin_dip=').$rowAccount2['fin_dip'].('&secci=').$rowAccount2['secci'].('&pass=').$rowAccount2['pass'].('" class="btn btn-primary btn-sm notActive" style="font-size: 12px ; background-color: red; " > Editar </a></td>
     </tr>
   </tbody>
 </table>
